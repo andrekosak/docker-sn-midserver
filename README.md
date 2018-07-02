@@ -10,7 +10,7 @@ Why do you need it? Just ignore this repo if you don't know the answer.
 
 ```bash
 $ docker run -d --name sn-mid-server \
-  -e 'SN_URL=dev00000.service-now.com' \
+  -e 'SN_URL=https://dev00000.service-now.com' \
   -e 'SN_USER=username' \
   -e 'SN_PASSWD=userpassword' \
   -e 'SN_MID_NAME=sn-mid-server' \
@@ -27,22 +27,21 @@ services:
     image: andrekosak/sn-midserver:kingston
     network_mode: host
     environment:
-      - SN_URL=dev00000.service-now.com
+      - SN_URL=https://dev00000.service-now.com
       - SN_USER=username
       - SN_PASSWD=password
       - SN_MID_NAME=my-mid-server
 ```
 
-# Persisting config and logs
+# Persisting logs
 
 ```bash
 $ docker run -d --name sn-mid-server \
-  -e 'SN_URL=dev00000.service-now.com' \
+  -e 'SN_URL=https://dev00000.service-now.com' \
   -e 'SN_USER=username' \
   -e 'SN_PASSWD=password' \
   -e 'SN_MID_NAME=my-mid-server' \
   -v './sn-midserver/logs:/opt/agent/logs' \
-  -v './sn-midserver/config.xml:/opt/agent/config.xml' \
   andrekosak/sn-midserver:kingston
 ```
 
@@ -56,10 +55,9 @@ services:
     image: andrekosak/sn-midserver:kingston
     volumes:
       - ./sn-midserver/logs:/opt/agent/logs
-      - ./sn-midserver/config.xml:/opt/agent/config.xml
     network_mode: host
     environment:
-      - SN_URL=dev00000.service-now.com
+      - SN_URL=https://dev00000.service-now.com
       - SN_USER=username
       - SN_PASSWD=password
       - SN_MID_NAME=my-mid-server
