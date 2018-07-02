@@ -17,7 +17,7 @@ RUN apt-get -q update && apt-get install -qy unzip \
     rm -rf /tmp/*
 
 RUN wget --no-check-certificate \
-      https://install.service-now.com/glide/distribution/builds/package/mid/2018/04/25/mid.kingston-10-17-2017__patch5-04-17-2018_04-25-2018_1112.linux.x86-64.zip \
+      https://install.service-now.com/glide/distribution/builds/package/mid/2018/03/15/mid.jakarta-05-03-2017__patch8a-03-12-2018_03-15-2018_1411.linux.x86-64.zip \
       -O /tmp/mid.zip && \
     unzip -d /opt /tmp/mid.zip && \
     mv /opt/agent/config.xml /opt/ && \
