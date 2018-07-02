@@ -1,4 +1,4 @@
-[![License MIT](https://img.shields.io/badge/license-ISC-blue.svg)](https://opensource.org/licenses/ISC) [![](https://ga-beacon.appspot.com/UA-82522402-3/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+[![License MIT](https://img.shields.io/badge/license-ISC-blue.svg)](https://opensource.org/licenses/ISC) [![](https://img.shields.io/docker/pulls/andrekosak/sn-midserver.svg)](https://hub.docker.com/r/andrekosak/sn-midserver 'DockerHub') [![](https://ga-beacon.appspot.com/UA-82522402-3/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 
 # What is ServiceNow Mid Sever
 
@@ -14,7 +14,7 @@ $ docker run -d --name sn-mid-server \
   -e 'SN_USER=username' \
   -e 'SN_PASSWD=userpassword' \
   -e 'SN_MID_NAME=sn-mid-server' \
-  andrekosak/docker-sn-midserver
+  andrekosak/sn-midserver:kingston
 ```
 
 or using Docker Compose:
@@ -24,7 +24,7 @@ version: '3'
 services:
   midserver:
     container_name: sn-midserver
-    image: docker-sn-midserver:latest
+    image: andrekosak/sn-midserver:kingston
     network_mode: host
     environment:
       - SN_URL=dev00000.service-now.com
@@ -43,7 +43,7 @@ $ docker run -d --name sn-mid-server \
   -e 'SN_MID_NAME=my-mid-server' \
   -v './sn-midserver/logs:/opt/agent/logs' \
   -v './sn-midserver/config.xml:/opt/agent/config.xml' \
-  andrekosak/docker-sn-midserver
+  andrekosak/sn-midserver:kingston
 ```
 
 or using Docker Compose:
@@ -53,7 +53,7 @@ version: '3'
 services:
   midserver:
     container_name: sn-midserver
-    image: docker-sn-midserver:latest
+    image: andrekosak/sn-midserver:kingston
     volumes:
       - ./sn-midserver/logs:/opt/agent/logs
       - ./sn-midserver/config.xml:/opt/agent/config.xml
