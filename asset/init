@@ -20,11 +20,11 @@ checkConf () {
 }
 
 generateConf () {
-  # Set config
-  sed 's/YOUR_MIDSERVER_NAME_GOES_HERE/'"${SN_MID_NAME}"'/' -i $CONF_FILE
-  sed 's/YOUR_INSTANCE_USER_NAME_HERE/'"${SN_USER}"'/' -i $CONF_FILE
-  sed 's/YOUR_INSTANCE_PASSWORD_HERE/'"${SN_PASSWD}"'/' -i $CONF_FILE
-  sed 's/YOUR_INSTANCE/'"${SN_URL}"'/' -i $CONF_FILE
+  # Setup config
+  /opt/fill-config-parameter $CONF_FILE name ${SN_MID_NAME}
+  /opt/fill-config-parameter $CONF_FILE mid.instance.username ${SN_USER}
+  /opt/fill-config-parameter $CONF_FILE mid.instance.password ${SN_PASSWD}
+  /opt/fill-config-parameter $CONF_FILE url ${SN_URL}
 }
 
 midStart () {

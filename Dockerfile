@@ -9,6 +9,8 @@ ADD asset/* /opt/
 
 RUN apt-get -q update && apt-get install -qy unzip \
     supervisor \
+    xmlstarlet \
+    vim \
     wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
@@ -20,6 +22,7 @@ RUN wget --no-check-certificate \
     unzip -d /opt /tmp/mid.zip && \
     mv /opt/agent/config.xml /opt/ && \
     chmod 755 /opt/init && \
+    chmod 755 /opt/fill-config-parameter && \
     rm -rf /tmp/*
 
 EXPOSE 80 443
