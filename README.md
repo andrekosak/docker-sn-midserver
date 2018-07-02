@@ -1,6 +1,6 @@
 [![License MIT](https://img.shields.io/badge/license-ISC-blue.svg)](https://opensource.org/licenses/ISC) [![](https://ga-beacon.appspot.com/UA-82522402-3/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 
-# What is ServiceNow Mid Sever 
+# What is ServiceNow Mid Sever
 
 [Read here](https://docs.servicenow.com/bundle/kingston-servicenow-platform/page/product/mid-server/reference/r-MIDServer.html)
 
