@@ -8,6 +8,11 @@ Why do you need it? Just ignore this repo if you don't know the answer.
 
 # TL;DR;
 
+* **Kingston**: `andrekosak/sn-midserver:kingston`
+* **Jakarta**: `andrekosak/sn-midserver:jakarta`
+
+## Get started right away
+
 ```bash
 $ docker run -d --name sn-mid-server \
   -e 'SN_URL=https://dev00000.service-now.com' \
