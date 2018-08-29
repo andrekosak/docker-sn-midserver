@@ -1,4 +1,4 @@
-FROM resin/armv7hf-debian-qemu
+FROM pipill/armhf-ubuntu:xenial
 LABEL maintainer="andrekosak@icloud.com"
 
 RUN [ "cross-build-start" ]
