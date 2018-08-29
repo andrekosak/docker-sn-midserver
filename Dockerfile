@@ -1,4 +1,4 @@
-FROM pipill/armhf-ubuntu:xenial
+FROM andrekosak/docker-armhf-ubuntu:xenial
 LABEL maintainer="andrekosak@icloud.com"
 
 RUN [ "cross-build-start" ]
