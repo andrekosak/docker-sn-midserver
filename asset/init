@@ -10,6 +10,8 @@ SN_URL=${SN_URL:-}
 SN_USER=${SN_USER:-}
 SN_PASSWD=${SN_PASSWD:-}
 SN_MID_NAME=${SN_MID_NAME:-}
+SN_MID_SYS_ID=${SN_MID_SYS_ID:-}
+SN_KEYPAIRS_MID_ID=${SN_KEYPAIRS_MID_ID:-}
 
 checkConf () {
   if [ ! -e $CONF_FILE ]
@@ -25,6 +27,9 @@ generateConf () {
   /opt/fill-config-parameter $CONF_FILE mid.instance.username ${SN_USER}
   /opt/fill-config-parameter $CONF_FILE mid.instance.password ${SN_PASSWD}
   /opt/fill-config-parameter $CONF_FILE url ${SN_URL}
+  /opt/fill-config-parameter $CONF_FILE mid_sys_id ${SN_MID_SYS_ID}
+  /opt/fill-config-parameter $CONF_FILE keypairs.mid_id ${SN_KEYPAIRS_MID_ID}
+
 }
 
 midStart () {
