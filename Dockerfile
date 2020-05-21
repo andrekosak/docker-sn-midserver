@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 LABEL maintainer="andrekosak@icloud.com"
 
-# To get rid of error messages like "debconf: unable to initialize frontend: Dialog"
+# Get rid of error messages like "debconf: unable to initialize frontend: Dialog"
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 RUN apt-get -q update && apt-get install -qy unzip \
